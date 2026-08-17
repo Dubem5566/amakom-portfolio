@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Portfolio of Amakom Chidubem Philip, a web developer specializing in Python, Flask and database-driven web applications."
+    >
+
+    <meta
+        name="author"
+        content="Amakom Chidubem Philip"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
+
+    <title>Amakom Chidubem | Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="navbar container">
+
+            <a href="#" class="logo">
+                AC<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-toggle" aria-label="Open navigation menu">
+                ☰
+            </button>
+
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section id="hero" class="hero">
+            <div class="container hero-content">
+
+                <p class="hero-label">
+                    WEB DEVELOPER
+                </p>
+
+                <h1>
+                    I build web applications
+                    <span>that solve real problems.</span>
+                </h1>
+
+                <p class="hero-description">
+                    I'm Amakom Chidubem, a web developer focused on
+                    Python, Flask and database-driven applications.
+                    I enjoy turning ideas into practical software.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work
+                    </a>
+
+                    <a
+                        href="https://github.com/Dubem5566"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary"
+                    >
+                        GitHub
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="about" class="section">
+          <div class="container">
+
+            <p class="section-label">ABOUT ME</p>
+
+            <div class="about-grid">
+
+              <div class="about-image">
+                <img
+                    src="images/My pic.jpg"
+                    alt="Amakom Chidubem Philip"
+                >
+              </div>
+
+              <div class="about-content">
+
+                <h2>
+                    Building software with a
+                    <span>problem-solving mindset.</span>
+                </h2>
+
+                <p>
+                    I'm a web developer with practical experience
+                    building and deploying web applications using
+                    Python and modern web technologies.
+                </p>
+
+                <p>
+                    My main focus is backend development with Flask,
+                    FastAPI, SQLAlchemy and PostgreSQL, while also
+                    working with HTML, CSS, Jinja2 and HTMX to build
+                    complete web applications.
+                </p>
+
+                <p>
+                    One of my main projects is BarTrack, a web-based
+                    bar management application that I independently
+                    designed, developed and deployed.
+                </p>
+
+              </div>
+
+          </div>
+
+     </div>
+        </section>
+
+
+        <section id="skills" class="section section-alt">
+            <div class="container">
+
+                <p class="section-label">TECHNICAL SKILLS</p>
+
+                <h2>
+                    Technologies I work with.
+                </h2>
+
+                <div class="skills-grid">
+
+                    <div class="skill-group">
+                        <h3>Backend</h3>
+                        <p>
+                            Python, Flask, FastAPI, SQLAlchemy,
+                            Flask Blueprints
+                        </p>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Databases</h3>
+                        <p>
+                            PostgreSQL, SQLite, Alembic,
+                            Flask-Migrate
+                        </p>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Frontend</h3>
+                        <p>
+                            HTML, CSS, Jinja2, HTMX
+                        </p>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>Tools & Deployment</h3>
+                        <p>
+                            Git, GitHub, Postman, Railway,
+                            Render, Gunicorn
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="projects" class="section">
+            <div class="container">
+
+                <p class="section-label">SELECTED WORK</p>
+
+                <h2>
+                    Things I've built.
+                </h2>
+
+                <!-- BarTrack -->
+                <article class="project-card featured-project">
+
+                   <div class="project-showcase">
+
+                     <div class="project-main-image">
+                        <img
+                           id="bartrack-main-image"
+                           src="images/Bartrack/dashboard.png"
+                           alt="BarTrack admin dashboard"
+                        >
+                     </div>
+
+                     <div class="project-thumbnails">
+
+                       <button
+                         class="project-thumbnail active"
+                         data-image="images/Bartrack/dashboard.png"
+                         data-alt="BarTrack admin dashboard"
+                       >
+                         <img
+                           src="images/bartrack/dashboard.png"
+                           alt="BarTrack dashboard thumbnail"
+                         >
+                       </button>
+
+                       <button
+                         class="project-thumbnail"
+                         data-image="images/Bartrack/inventory.png"
+                         data-alt="BarTrack inventory management"
+                        >
+                         <img
+                           src="images/Bartrack/inventory.png"
+                           alt="BarTrack inventory thumbnail"
+                          >
+                       </button>
+
+                       <button
+                         class="project-thumbnail"
+                         data-image="images/Bartrack/sales.png"
+                         data-alt="BarTrack sales management">
+                         
+                         <img
+                           src="images/Bartrack/sales.png"
+                           alt="BarTrack sales thumbnail">
+                       </button>
+
+                       <button
+                         class="project-thumbnail"
+                         data-image="images/Bartrack/attendance.png"
+                         data-alt="BarTrack employee attendance">
+                       
+                          <img
+                            src="images/Bartrack/attendance.png"
+                            alt="BarTrack attendance thumbnail">
+                       </button>
+
+                     </div>
+
+                   </div>
+
+
+                   <div class="featured-project-content">
+
+                     <p class="project-type">
+                       FEATURED PROJECT · FULL-STACK WEB APPLICATION
+                     </p>
+
+                     <h3>BarTrack</h3>
+
+                     <div class="project-description">
+
+                      <p>
+                        BarTrack is a web-based management application designed for
+                        bars to manage inventory, sales, employee attendance and
+                        day-to-day operations from one centralized platform.
+                      </p>
+
+                      <p>
+                        I independently designed, developed and deployed the
+                        application, including its database architecture,
+                        authentication system, role-based permissions, inventory
+                        workflows and sales logic.
+                      </p>
+                     </div>
+
+
+                     <div class="project-features">
+
+                      <h4>Key Features</h4>
+
+                      <div class="feature-grid">
+                        
+                        <div class="feature-item">
+                            <h5>Inventory Management</h5>
+                            <p>
+                              Track drinks across bottles, packs,
+                              cartons and crates.
+                            </p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h5>Sales Tracking</h5>
+                            <p>
+                              Record sales and automatically
+                              update available stock.
+                            </p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h5>Role-Based Access</h5>
+                            <p>
+                              Separate permissions for different
+                              operational roles.
+                            </p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h5>Employee Attendance</h5>
+                            <p>
+                              Track staff clock-in and
+                              clock-out activity.
+                            </p>
+                        </div>
+
+                        <div class="feature-item">
+                            <h5>Low Stock Alerts</h5>
+                            <p>
+                              Identify products approaching
+                               their defined stock thresholds.
+                            </p>
+                        </div>
+
+                      </div>
+
+                     </div>
+                     
+                     <div class="project-technology">
+                        <h4>Built With</h4>
+                        <div class="project-tags">
+                           <span>Python</span>
+                           <span>Flask</span>
+                           <span>SQLAlchemy</span>
+                           <span>PostgreSQL</span>
+                           <span>HTMX</span>
+                           <span>Jinja2</span>
+                        </div>
+                     </div>
+
+                     <div class="project-links">
+
+                       <a
+                         href="https://bartrackapp.xyz"
+                         target="_blank"
+                         rel="noopener noreferrer"
+                        >
+                         Live Demo →
+                       </a>
+
+                      </div>
+
+                   </div>
+
+                </article>
+
+
+                <!-- HR Simulator -->
+                 <div class="secondary-project-heading">
+
+                  <p class="section-label">
+                    OTHER PROJECT
+                  </p>
+
+                 </div>
+                <article class="secondary-project">
+
+                    <div class="secondary-project-image">
+                        <img
+                           id="hr-main-image"
+                           src="images/HR.png"
+                           alt="HR admin dashboard"
+                        >
+                    </div>
+
+                    <div class="secondary-project-content">
+
+                        <p class="project-type">
+                            WEB APPLICATION
+                        </p>
+
+                        <h3>HR Simulator</h3>
+
+                        <p>
+                            A Flask-based HR management application
+                            for managing employees, salary payments
+                            and transaction records.
+                        </p>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>SQLAlchemy</span>
+                            <span>Jinja2</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a
+                                href="https://github.com/Dubem5566/Hr-Simulator-flask"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                GitHub →
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- Experience -->
+        <section id="experience" class="section section-alt">
+           <div class="container">
+
+             <p class="section-label">EXPERIENCE</p>
+
+             <h2>
+               Professional experience.
+             </h2>
+
+             <div class="experience-item">
+
+              <div class="experience-header">
+
+                <div>
+                    <h3>Digital Operator</h3>
+                    <p>Softnergy Limited</p>
+                </div>
+
+                <span>
+                    Jan 2026 — Present
+                </span>
+
+               </div>
+
+               <div class="experience-description">
+
+                <p>
+                    Responsible for publishing the daily sermon
+                    reading to the company's application, ensuring
+                    content is accurately uploaded and available
+                    to users according to the daily schedule.
+                </p>
+
+                <ul>
+
+                    <li>
+                        Manage the daily content publication workflow
+                        using the company's internal platform.
+                    </li>
+
+                    <li>
+                        Review and verify content before publication
+                        to maintain accuracy and consistency.
+                    </li>
+
+                    <li>
+                        Work independently to complete recurring
+                        publishing tasks within scheduled deadlines.
+                    </li>
+
+                    <li>
+                        Use AI-assisted tools, including Gemini,
+                        as part of the content preparation workflow.
+                    </li>
+
+                </ul>
+
+               </div>
+
+             </div>
+
+           </div>
+        </section>
+
+        <section class="section education-section">
+           <div class="container">
+
+             <p class="section-label">EDUCATION</p>
+
+             <div class="education-item">
+
+                <div>
+                   <h3>
+                      B.Tech. Industrial Chemistry
+                   </h3>
+
+                   <p>
+                    Federal University of Technology, Owerri
+                   </p>
+                </div>
+
+                <span>
+                  2020 — 2025
+                </span>
+
+             </div>
+
+           </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section contact-section">
+           <div class="container">
+
+             <p class="section-label">CONTACT</p>
+
+             <div class="contact-content">
+
+                <h2>
+                  Let's build something useful.
+                </h2>
+
+                <p>
+                  I'm currently open to web development opportunities
+                  where I can contribute my backend development skills,
+                  solve practical problems and continue growing as a
+                  software developer.
+                </p>
+
+                <div class="contact-links">
+
+                  <a href="mailto:amakomchidubem@gmail.com">
+                     <span>Email</span>
+                      amakomchidubem@gmail.com
+                  </a>
+
+                  <a href="tel:+2349132971263">
+                    <span>Phone</span>
+                    +234 913 297 1263
+                  </a>
+
+                  <a
+                    href="https://www.linkedin.com/in/chidubem-amakom-4ab02a276"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <span>LinkedIn</span>
+                    linkedin.com/in/chidubem-amakom
+                  </a>
+
+                  <a
+                    href="https://github.com/Dubem5566"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                   >
+                    <span>GitHub</span>
+                    github.com/Dubem5566
+                  </a>
+
+                </div>
+
+             </div>
+
+           </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <p>
+                © 2026 Amakom Chidubem Philip.
+            </p>
+
+            <p>
+                Built with HTML, CSS & JavaScript.
+            </p>
+
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
