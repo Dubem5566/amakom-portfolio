@@ -1053,7 +1053,7 @@ p {
     }
 
     .contact-links {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .contact-links a {
