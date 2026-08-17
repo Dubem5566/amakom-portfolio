@@ -873,6 +873,9 @@ p {
     font-size: 0.8rem;
 }
 
+.container {
+    justify-self: center;
+}
 
 /* ========================================
    RESPONSIVE
