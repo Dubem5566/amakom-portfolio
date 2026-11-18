@@ -34,30 +34,35 @@ if (menuToggle && navLinks) {
 
 document.querySelectorAll(".project-gallery").forEach(gallery => {
 
+    const mainImage = gallery.querySelector(".main-project-screenshot");
     const thumbnails = gallery.querySelectorAll(".project-thumbnail");
-    const placeholder = gallery.querySelector(".screenshot-placeholder");
     const caption = gallery.querySelector(".placeholder-caption");
 
     thumbnails.forEach(thumbnail => {
 
         thumbnail.addEventListener("click", () => {
 
+            // Get the selected image and title
+            const image = thumbnail.dataset.image;
             const title = thumbnail.dataset.title;
 
-            // Update placeholder caption
-            if (caption) {
+            // Update the main screenshot
+            if (mainImage && image) {
+                mainImage.src = image;
+                mainImage.alt = title;
+            }
+
+            // Update the caption
+            if (caption && title) {
                 caption.textContent = title;
             }
 
-            if (placeholder) {
-                placeholder.dataset.placeholder = title;
-            }
-
-            // Update active thumbnail
+            // Remove active class from all thumbnails
             thumbnails.forEach(item => {
                 item.classList.remove("active");
             });
 
+            // Highlight the selected thumbnail
             thumbnail.classList.add("active");
 
         });

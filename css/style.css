@@ -1299,25 +1299,30 @@ p {
 .project-thumbnail {
     min-height: 65px;
     padding: 12px;
-    border: 1px solid var(--border);
     border-radius: var(--radius-sm);
     background: var(--bg-secondary);
     color: var(--text-secondary);
     font-family: inherit;
     font-size: 0.8rem;
     cursor: pointer;
-    transition: var(--transition);
+    border: 2px solid transparent;
+    opacity: 0.6;
+    transition: all 0.3s ease;
 }
 
 .project-thumbnail:hover {
     border-color: var(--accent);
     color: var(--text-primary);
+    opacity: 1;
 }
 
 .project-thumbnail.active {
     border-color: var(--accent);
     background: rgba(59, 130, 246, 0.12);
     color: var(--accent-hover);
+    opacity: 1;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15);
 }
 
 /* ========================================
