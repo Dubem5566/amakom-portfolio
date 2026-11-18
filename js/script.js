@@ -1,28 +1,67 @@
+// ========================================
+// MOBILE NAVIGATION
+// ========================================
+
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
+if (menuToggle && navLinks) {
 
-const bartrackMainImage = document.querySelector("#bartrack-main-image");
-const bartrackThumbnails = document.querySelectorAll(".project-thumbnail");
+    menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("active");
 
-bartrackThumbnails.forEach((thumbnail) => {
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Close navigation menu" : "Open navigation menu"
+        );
+    });
 
-    thumbnail.addEventListener("click", () => {
+    // Close menu when a navigation link is clicked
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+        });
+    });
+}
 
-        const image = thumbnail.dataset.image;
-        const alt = thumbnail.dataset.alt;
 
-        bartrackMainImage.src = image;
-        bartrackMainImage.alt = alt;
+// ========================================
+// PROJECT SCREENSHOT GALLERIES
+// ========================================
 
-        bartrackThumbnails.forEach((item) => {
-            item.classList.remove("active");
+document.querySelectorAll(".project-gallery").forEach(gallery => {
+
+    const thumbnails = gallery.querySelectorAll(".project-thumbnail");
+    const placeholder = gallery.querySelector(".screenshot-placeholder");
+    const caption = gallery.querySelector(".placeholder-caption");
+
+    thumbnails.forEach(thumbnail => {
+
+        thumbnail.addEventListener("click", () => {
+
+            const title = thumbnail.dataset.title;
+
+            // Update placeholder caption
+            if (caption) {
+                caption.textContent = title;
+            }
+
+            if (placeholder) {
+                placeholder.dataset.placeholder = title;
+            }
+
+            // Update active thumbnail
+            thumbnails.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            thumbnail.classList.add("active");
+
         });
 
-        thumbnail.classList.add("active");
     });
 
 });

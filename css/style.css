@@ -1069,3 +1069,371 @@ p {
         align-items: flex-start;
     }
 }
+
+/* ========================================
+   UPDATED PROJECT LAYOUT
+======================================== */
+
+#projects h2 {
+    margin-top: 12px;
+    margin-bottom: 65px;
+}
+
+.project-card {
+    margin-bottom: 100px;
+}
+
+.project-gallery {
+    width: 100%;
+}
+
+.project-main-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: #080e1a;
+}
+
+/* Desktop screenshot placeholder */
+
+.screenshot-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    background:
+        radial-gradient(ellipse at center, #17263c 0%, #080e1a 75%);
+}
+
+.mock-window {
+    width: 94%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    overflow: hidden;
+    border: 1px solid #334155;
+    border-radius: 7px;
+    background: #f8fafc;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.mock-sidebar {
+    padding: 7%;
+    background: #172033;
+    display: flex;
+    flex-direction: column;
+    gap: 9%;
+}
+
+.mock-logo {
+    color: #60a5fa;
+    font-size: clamp(8px, 1.2vw, 15px);
+    font-weight: 700;
+    margin-bottom: 12%;
+}
+
+.mock-nav {
+    padding: 7% 8%;
+    border-radius: 4px;
+    color: #94a3b8;
+    font-size: clamp(6px, 0.8vw, 10px);
+}
+
+.mock-nav.active {
+    background: #263c5a;
+    color: #ffffff;
+}
+
+.mock-content {
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    overflow: hidden;
+}
+
+.mock-topbar {
+    height: 8%;
+    border-bottom: 1px solid #e2e8f0;
+    background: linear-gradient(
+        90deg,
+        #e2e8f0 15%,
+        transparent 15%,
+        transparent 75%,
+        #e2e8f0 75%
+    );
+}
+
+.mock-heading {
+    width: 35%;
+    height: 7%;
+    border-radius: 3px;
+    background: #cbd5e1;
+}
+
+.mock-stats {
+    height: 23%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3%;
+}
+
+.mock-stats div,
+.mock-dashboard-grid div {
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #e8eef7
+    );
+}
+
+.mock-chart {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 4%;
+    gap: 3%;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    background: #ffffff;
+}
+
+.mock-chart div {
+    width: 10%;
+    height: 45%;
+    border-radius: 3px 3px 0 0;
+    background: #60a5fa;
+}
+
+.mock-chart div:nth-child(2),
+.mock-chart div:nth-child(5) {
+    height: 75%;
+}
+
+.mock-chart div:nth-child(3),
+.mock-chart div:nth-child(7) {
+    height: 60%;
+}
+
+.mock-chart div:nth-child(4) {
+    height: 90%;
+}
+
+.mock-dashboard-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3%;
+}
+
+.mock-editor {
+    flex: 1;
+    padding: 4%;
+    background: white;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.mock-editor div {
+    height: 8%;
+    width: 85%;
+    background: #e2e8f0;
+    border-radius: 3px;
+}
+
+.mock-editor div:first-child {
+    width: 45%;
+    height: 12%;
+    background: #cbd5e1;
+}
+
+/* Project-specific placeholder accents */
+
+.buds-window .mock-logo {
+    color: #a3c17b;
+}
+
+.buds-window .mock-chart div {
+    background: #789c50;
+}
+
+.cesso-window .mock-logo {
+    color: #fb923c;
+}
+
+.cesso-window .mock-chart div {
+    background: #fb923c;
+}
+
+.placeholder-caption {
+    color: #94a3b8;
+    font-size: clamp(8px, 1vw, 12px);
+    letter-spacing: 0.04em;
+    text-align: center;
+}
+
+/* ========================================
+   PROJECT THUMBNAILS
+======================================== */
+
+.project-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.project-thumbnail {
+    min-height: 65px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    font-family: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.project-thumbnail:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.project-thumbnail.active {
+    border-color: var(--accent);
+    background: rgba(59, 130, 246, 0.12);
+    color: var(--accent-hover);
+}
+
+/* ========================================
+   PROJECT CONTENT
+======================================== */
+
+.project-content {
+    max-width: 900px;
+    margin: 45px auto 0;
+}
+
+.project-content h3 {
+    font-size: clamp(2.3rem, 5vw, 3.5rem);
+    margin: 10px 0 25px;
+}
+
+.project-content .project-type {
+    margin-top: 0;
+}
+
+.project-content .project-description {
+    max-width: 780px;
+}
+
+.project-content .project-description p {
+    font-size: 1rem;
+    margin-bottom: 17px;
+}
+
+.project-content .project-features {
+    margin-top: 40px;
+}
+
+.project-content .project-technology {
+    margin-top: 35px;
+}
+
+.project-private-note {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-style: italic;
+}
+
+/* ========================================
+   ADDITIONAL PROJECTS
+======================================== */
+
+.secondary-project-heading {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+/* ========================================
+   RESPONSIVE PROJECTS
+======================================== */
+
+@media (max-width: 800px) {
+
+    .project-card {
+        margin-bottom: 75px;
+    }
+
+    .project-content {
+        margin-top: 35px;
+    }
+
+    .project-main-image {
+        border-radius: 8px;
+    }
+
+    .project-thumbnails {
+        gap: 7px;
+    }
+
+    .project-thumbnail {
+        min-height: 55px;
+        padding: 7px 4px;
+        font-size: 0.7rem;
+    }
+
+    .mock-window {
+        grid-template-columns: 22% 1fr;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    #projects h2 {
+        margin-bottom: 40px;
+    }
+
+    .project-thumbnails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-thumbnail {
+        min-height: 45px;
+    }
+
+    .project-content {
+        margin-top: 30px;
+    }
+
+    .screenshot-placeholder {
+        padding: 2%;
+        gap: 5px;
+    }
+
+    .mock-window {
+        width: 98%;
+        height: 83%;
+    }
+
+    .mock-sidebar {
+        gap: 7%;
+    }
+
+}
